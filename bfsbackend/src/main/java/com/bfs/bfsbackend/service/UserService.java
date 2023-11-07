@@ -15,11 +15,16 @@ public class UserService {
         return user;
     }
 
-    public Users removeUser(String name)
+    public Users removeUser(String uuid)
     {
-        Users user = userRepository.findById(name).orElseThrow(() -> new IllegalArgumentException("no such data"));
+        Users user = userRepository.findById(uuid).orElseThrow(() -> new IllegalArgumentException("no such data"));
         userRepository.delete(user);
 
+        return user;
+    }
+
+    public Users selectUser(String uuid) {
+        Users user = userRepository.findById(uuid).orElseThrow(() -> new IllegalArgumentException("no such data"));
         return user;
     }
 }

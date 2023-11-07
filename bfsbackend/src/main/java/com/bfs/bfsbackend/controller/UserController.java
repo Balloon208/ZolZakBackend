@@ -6,8 +6,6 @@ import com.bfs.bfsbackend.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.Map;
 
 @RestController
 @AllArgsConstructor
@@ -20,8 +18,8 @@ public class UserController {
 //    }
 
     @GetMapping("/api/users/{id}")
-    public Users selectWithId(@PathVariable("id") String name){
-        Users user = userRepository.findById(name).orElseThrow(() -> new IllegalArgumentException("no such data"));
+    public Users selectWithId(@PathVariable("id") String uuid){
+        Users user = userService.selectUser(uuid);
         return user;
     }
 
@@ -33,8 +31,8 @@ public class UserController {
     }
 
     @DeleteMapping("/api/users/delete/{id}")
-    public Users deleteWithId(@PathVariable("id") String name){
-        Users user = userService.removeUser(name);
+    public Users deleteWithId(@PathVariable("id") String uuid){
+        Users user = userService.removeUser(uuid);
         return user;
     }
 }

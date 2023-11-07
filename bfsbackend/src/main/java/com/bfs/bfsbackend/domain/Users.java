@@ -12,7 +12,9 @@ import javax.persistence.*;
 @Data
 public class Users {
     @Id
-    private String playername;
+    private String uuid;
+    @Column
+    private String name;
     @Column
     private Long coin;
     @Column
@@ -23,4 +25,6 @@ public class Users {
     private Long fanmeetingC;
     @Column
     private Long likeability;
+    @Column
+    private Long day;
 }
