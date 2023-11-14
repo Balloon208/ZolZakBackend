@@ -26,5 +26,9 @@ public class Users {
     @Column
     private Long likeability;
     @Column
+    private double probability;
+    @Column
+    private Long month;
+    @Column
     private Long day;
 }
