@@ -31,4 +31,20 @@ public class Users {
     private Long month;
     @Column
     private Long day;
+    @Column
+    private Long ClickLevel;
+    @Column
+    private Long AutoLevel;
+    @Column
+    private Long Probability;
+    @Column
+    private Long ItemCount;
+    @Column
+    private Long StoryCount;
+    @Column
+    private Long FanclubCount;
+    @Column
+    private Long WorldFanMeeting;
+    @Column
+    private Long WorldConcert;
 }
