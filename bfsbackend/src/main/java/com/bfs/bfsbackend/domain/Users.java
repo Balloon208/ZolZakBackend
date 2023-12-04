@@ -36,7 +36,7 @@ public class Users {
     @Column
     private Long AutoLevel;
     @Column
-    private Long Probability;
+    private Long Count_Probability;
     @Column
     private Long ItemCount;
     @Column
